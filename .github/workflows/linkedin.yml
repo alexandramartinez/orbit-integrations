@@ -18,10 +18,10 @@ jobs:
     - name: Bundle Install
       run: |
         gem update --system 3.1.4 -N
-        gem install --no-document linkedin_orbit --historical-import
+        gem install --no-document linkedin_orbit
     - name: Check for New Comments
       run: |
-        linkedin_orbit --check-comments
+        linkedin_orbit --check-comments --historical-import
       env:
         LINKEDIN_ORGANIZATION: ${{ secrets.LINKEDIN_ORGANIZATION }}
         LINKEDIN_TOKEN: ${{ secrets.LINKEDIN_TOKEN }}
