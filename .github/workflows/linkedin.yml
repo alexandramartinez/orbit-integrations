@@ -18,7 +18,7 @@ jobs:
     - name: Bundle Install
       run: |
         gem update --system 3.1.4 -N
-        gem install --no-document linkedin_orbit
+        gem install --no-document linkedin_orbit --historical-import
     - name: Check for New Comments
       run: |
         linkedin_orbit --check-comments
